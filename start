@@ -1,0 +1,10 @@
+#!/bin/bash
+
+selenium-server &>/dev/null &
+selenium_pid=$!
+
+mix run &
+elixir_pid=$!
+
+wait $elixir_pid
+kill -9 $selenium_pid
