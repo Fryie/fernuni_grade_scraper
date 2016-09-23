@@ -12,6 +12,13 @@ brew install elixir
 
 On Linux, use your favourite package manager. On Windows, you're on your own.
 
+You'll also need to run
+```
+mix local.hex
+mix local.rebar
+```
+once initially.
+
 ## Select exam
 Open up `lib/grade_scraper.ex` and exchange the `@exam_search_string` constant (currently, it's checking for the probability module). Basically, the scraper will just check whether that string appears somewhere on the grade listing page.
 
