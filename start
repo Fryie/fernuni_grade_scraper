@@ -3,8 +3,5 @@
 selenium-server &>/dev/null &
 selenium_pid=$!
 
-mix deps.get && mix run &
-elixir_pid=$!
-
-wait $elixir_pid
+mix deps.get && mix run
 kill -9 $selenium_pid
