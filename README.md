@@ -19,6 +19,11 @@ mix local.rebar
 ```
 once initially.
 
+You'll also need an older version of Firefox (<= 46).
+
+Unfortunately, newer versions of Firefox break selenium. Installing FF46 and disabling upgrades worked for me.
+The sad state of browser automation seems to be that nothing works out of the box anymore without tedious configuration. Chromedriver didn't work for me. Phantomjs (1 or 2) didn't work for me (I suspect the page it's trying to open is too broken for phantomjs to work). If anybody knows anything that actually works, please let me know.
+
 ## Select exam
 Open up `lib/grade_scraper.ex` and exchange the `@exam_search_string` constant (currently, it's checking for the probability module). Basically, the scraper will just check whether that string appears somewhere on the grade listing page.
 
